@@ -8,10 +8,25 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-    <ListView
-        android:id="@+id/listView1"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:queryHint="カテゴリ検索" />
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
